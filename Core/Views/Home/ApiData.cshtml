@@ -1,0 +1,21 @@
+@model IEnumerable<Core.Information.Information>
+@{
+    ViewData["Title"] = "Api Data";
+}
+
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary" 
+     data-toggle="tooltip" data-placement="right" title="Create new item">Create New</a>
+</p>
+
+<div>
+    @foreach (var item in Model)
+        {
+           @Html.Partial("pertial", item)
+        }
+
+</div>
+<div class="deletealert">deletealert</div>

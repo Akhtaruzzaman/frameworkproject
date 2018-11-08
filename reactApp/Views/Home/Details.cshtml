@@ -1,0 +1,38 @@
+@model Core.Information.Information
+
+@{
+  ViewBag.Title = "Title";
+}
+<h2>Details</h2>
+
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Name)
+        </div>
+        <div class="col-md-8">
+            @Html.DisplayFor(model=> model.Name, new {@class="form-control input-sm"})
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Address)
+        </div>
+        <div class="col-md-8">
+            @Html.DisplayFor(model=> model.Address, new { @class = "form-control input-sm" })
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Mobile)
+        </div>
+        <div class="col-md-8">
+            @Html.DisplayFor(model=> model.Mobile, new { @class = "form-control input-sm" })
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+           <a href="@Url.Action("ApiData")">Go to Index</a>
+        </div>
+        <div class="col-md-2"></div>
+    </div>

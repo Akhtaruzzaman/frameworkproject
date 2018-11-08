@@ -1,0 +1,45 @@
+﻿@using BlazorLib1
+@page "/counter"
+
+<p>Like: @currentCountLike <button class="glyphicon glyphicon-arrow-up" onclick="@IncrementLikeCount">Up</button>
+<button class="glyphicon glyphicon-arrow-down" onclick="@DecrementtLikeCount">Down</button></p>
+<p>Dislike: @currentCountDislike <button class="glyphicon glyphicon-arrow-up" onclick="@IncrementDislikeCount">Up</button>
+<button class="glyphicon glyphicon-arrow-down" onclick="@DecrementDislikeCount">Down</button></p>
+
+<button class="glyphicon glyphicon-arrow-down" onclick="@CommandPrompt">Command Prompt</button>
+
+
+<button onclick="@OnClick" />
+@functions {
+    void OnClick(UIMouseEventArgs e)
+    {
+        Console.WriteLine("hello, world");
+    }
+}
+
+@functions {
+    int currentCountLike = 0;
+
+    void IncrementLikeCount()
+    {
+        currentCountLike++;
+    }
+    void DecrementtLikeCount()
+    {
+        currentCountLike--;
+    }
+    int currentCountDislike = 0;
+
+    void IncrementDislikeCount()
+    {
+        currentCountDislike++;
+    }
+    void DecrementDislikeCount()
+    {
+        currentCountDislike--;
+    }
+    void CommandPrompt()
+    {
+       ExampleJsInterop.Prompt("+1!");
+    }
+}

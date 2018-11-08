@@ -1,0 +1,51 @@
+@model CoreMvc.Information.Information
+
+@{
+  ViewBag.Title = "Title";
+}
+<h2>Create</h2>
+
+<form asp-route="Edit" method="post">
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Name)
+        </div>
+        <div class="col-md-2">
+            @Html.TextBoxFor(model=> model.Name, new {@class="form-control input-sm"})
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Address)
+        </div>
+        <div class="col-md-2">
+            @Html.TextBoxFor(model=> model.Address, new { @class = "form-control input-sm" })
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Mobile)
+        </div>
+        <div class="col-md-2">
+            @Html.TextBoxFor(model=> model.Mobile, new { @class = "form-control input-sm" })
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.DisplayNameFor(model=> model.Age)
+        </div>
+        <div class="col-md-2">
+            @Html.TextBoxFor(model=> model.Age, new { @class = "form-control input-sm" })
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <input type="submit" value="Save" class="btn btn-primary"/>
+             <a  href="@Url.Action("ApiData")" class="btn btn-primary">Cancel</a>
+        </div>
+        <div class="col-md-2">
+           
+        </div>
+    </div>
+</form>
